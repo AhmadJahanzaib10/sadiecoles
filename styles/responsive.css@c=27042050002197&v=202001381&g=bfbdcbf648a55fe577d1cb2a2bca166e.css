@@ -1,0 +1,1409 @@
+
+
+
+/* ------------------------------------------------------------------------
+--------------------------------- Size 4 ----------------------------------
+------------------------------------------------------------------------ */
+
+@media screen and (max-width: 1340px) {
+
+
+    /* -----------------------------------------------------------
+       Generic
+    ----------------------------------------------------------- */
+    #container,
+    #header.header_fixed .inner {
+        box-sizing: border-box;
+    }
+    
+    #main_content {
+        padding-top: 130px;
+    }
+
+    #exhibitions_nav {
+        display: none;
+    }
+    
+    #header {
+        padding: 45px 0 0;
+    }
+    #header.header_fixed {
+        position: absolute;
+        top: 0;
+        z-index: 3001;
+    }
+    body.cms-frontend-toolbar-active #header.header_fixed {
+        position: absolute;
+        top: 0;
+    }
+    body.cms-frontend-toolbar-active.type-fullscreen #header.header_fixed, 
+    body.cms-frontend-toolbar-active.section-artists.no-page-params #header.header_fixed {
+        top: 28px;
+    }
+    #logo a, #logo a:visited {
+        font-size: 2.4rem;
+        line-height: 2.6rem;
+    }
+    #basket {
+        position: absolute;
+        top: 47px;
+        right: 102px;
+        margin: 0;
+    }
+    #header_quick_search {
+        margin: 0;
+        height: 26px;
+        position: absolute;
+        top: 43px;
+        right: 62px;
+        z-index: 4000;
+    }
+    #header_quick_search.active {
+            right: 20px;
+        }
+        #header_quick_search.active #header_quicksearch_field {
+            width: calc(100vw - 59px);
+            opacity: 1.0;
+            visibility: visible;
+        }
+        #logo,
+        #basket,
+        #top_navigation_reveal {
+            z-index: 1;
+        }
+        body.header_quick_search_open #logo,
+        body.header_quick_search_open #basket,
+        body.header_quick_search_open #top_navigation_reveal {
+            opacity: 0;
+        }
+    
+    #top_navigation_reveal {
+        display: block;
+        width: 22px;
+        height: 20px;
+        position: absolute;
+        right: 20px;
+        top: 49px;
+        margin: 0;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: .5s ease-in-out;
+        -moz-transition: .5s ease-in-out;
+        -o-transition: .5s ease-in-out;
+        transition: .5s ease-in-out;
+        cursor: pointer;
+        z-index: 3000;
+    }
+    #top_navigation_reveal span {
+        display: block;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background: #010101;
+        opacity: 1;
+        left: 0;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: .25s ease-in-out;
+        -moz-transition: .25s ease-in-out;
+        -o-transition: .25s ease-in-out;
+        transition: .25s ease-in-out;
+    }
+    body.nav-overlay-open #top_navigation_reveal span {
+        background: #222;
+    }
+    #top_navigation_reveal span:nth-child(1) {
+        top: 0px;
+    }
+    #top_navigation_reveal span:nth-child(2), #top_navigation_reveal span:nth-child(3) {
+        top: 7px;
+    }
+    #top_navigation_reveal span:nth-child(4) {
+        top: 14px;
+    }
+    body.nav-overlay-open #top_navigation_reveal span:nth-child(1) {
+        top: 7px;
+        width: 0%;
+        left: 50%;
+    }
+    body.nav-overlay-open #top_navigation_reveal span:nth-child(2) {
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    body.nav-overlay-open #top_navigation_reveal span:nth-child(3) {
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+    body.nav-overlay-open #top_navigation_reveal span:nth-child(4) {
+        top: 7px;
+        width: 0%;
+        left: 50%;
+    }
+
+
+    #top_nav.navigation ul li ul {
+        display: block;
+        max-height: none;
+        opacity: 1;
+        padding: 35px 0 20px;
+    }
+        #top_nav.navigation ul li ul li:last-child {
+            margin-bottom: 0;
+        }
+    
+    
+    #header.header_fixed {
+        background: transparent;
+    }
+    .topnav-overlay {
+        visibility: hidden;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100vh;
+        background: transparent;
+        z-index: 3000;
+        max-height: 0;
+        overflow: hidden;
+        -webkit-transition: max-height 0.5s cubic-bezier(0.000, 0.575, 0.130, 1); /* older webkit */
+        -webkit-transition: max-height 0.5s cubic-bezier(0.000, 0.575, 0.130, 1.045);
+           -moz-transition: max-height 0.5s cubic-bezier(0.000, 0.575, 0.130, 1.045);
+             -o-transition: max-height 0.5s cubic-bezier(0.000, 0.575, 0.130, 1.045);
+                transition: max-height 0.5s cubic-bezier(0.000, 0.575, 0.130, 1.045); /* custom */
+        -webkit-transition-timing-function: cubic-bezier(0.000, 0.575, 0.130, 1); /* older webkit */
+        -webkit-transition-timing-function: cubic-bezier(0.000, 0.575, 0.130, 1.045);
+           -moz-transition-timing-function: cubic-bezier(0.000, 0.575, 0.130, 1.045);
+             -o-transition-timing-function: cubic-bezier(0.000, 0.575, 0.130, 1.045);
+                transition-timing-function: cubic-bezier(0.000, 0.575, 0.130, 1.045); /* custom */
+    }
+    body.nav-overlay-open .topnav-overlay {
+        visibility: visible;
+        max-height: 100vh;
+        background: rgba(1, 1, 1, 0.96);
+        background: #fff;
+    }
+    body.nav-overlay-open #logo a,
+    body.nav-overlay-open #logo a:visited,
+    body.nav-overlay-open #top_nav.navigation ul li a,
+    body.nav-overlay-open #top_nav.navigation ul li a:visited {
+        color: #222 !important;
+    }
+    
+    body.nav-overlay-open #top_navigation_reveal span {
+        background: #222 !important;
+    }
+
+    #top_nav.navigation {
+        float: none;
+        clear: both;
+        padding-top: 0;
+    }
+    #top_nav.navigation ul.topnav {
+        vertical-align: middle;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 120px 20px 90px 20px;
+        box-sizing: border-box;
+        width: 100%;
+        display: none;
+    }
+    body.nav-overlay-open #top_nav.navigation ul.topnav {
+        display: block;
+    }
+    #top_nav.navigation ul li {
+        float: none;
+        display: block;
+        margin: 0px 0px 15px 0;
+        clear: none;
+        text-align: left;
+    }
+
+    #translations_nav.navigation ul li {
+        display: inline-block;
+    }
+    
+
+
+    /* -----------------------------------------------------------
+       General layout
+    ----------------------------------------------------------- */
+
+
+
+    /* -----------------------------------------------------------
+        Global classes
+    ----------------------------------------------------------- */
+
+
+    /* -----------------------------------------------------------
+       Page Specific
+    ----------------------------------------------------------- */
+    
+    
+    /* Artist list
+    ----------------------------------------------------------- */
+    .page-artists .subsection-artist-list-preview #list_preview_navigation.records_list.columns_list ul {
+        width: 25%;
+    }
+    .page-artists .subsection-artist-list-preview #list_preview_navigation.records_list.columns_list ul li {
+        margin: 0 0 20px 0;
+        width: 100%;
+    }
+    #filters_artists_nav #list_formatted ul,
+    #filters_artists_nav #list_original ul {
+        width: 25%;
+    }
+    /* #publications_artists_nav ul li {
+        margin: 0 0 20px 0;
+        width: 25%;
+        clear: none;
+    } */
+    
+    
+    /* Contact
+    ----------------------------------------------------------- */
+    .section-contact #content_module {
+        width: 45%;
+    }
+    .section-contact #sidebar {
+        width: 54%;
+    }
+
+}
+
+/* ------------------------------------------------------------------------
+--------------------------------- Size 3 ----------------------------------
+------------------------------------------------------------------------ */
+
+@media screen and (max-width: 1023px) {
+
+
+    /* -----------------------------------------------------------
+       Generic
+    ----------------------------------------------------------- */
+    
+    .image_popup { 
+        /* Removed fancybox popups on mobile as these are unnecessary */
+        pointer-events: none;
+    }
+    .image_list {
+        width: 100%;
+    }
+    .image_list ul li {
+        margin: 0 0 40px;
+    }
+
+
+    /* -----------------------------------------------------------
+       General layout
+    ----------------------------------------------------------- */
+
+    #container {
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+    #header.header_fixed .inner {
+        padding: 0 20px 15px 20px;
+    }
+
+    #top_nav.navigation ul li {
+        margin-left: 15px;
+    }
+    #top_nav.navigation ul li:last-child {
+        padding-right: 0;
+    }
+    #top_nav.navigation ul.topnav li a {
+        font-size: 2.1rem;
+        padding-top: 4px;
+    }
+
+    #header_quick_search {
+        margin-left: 17px;
+    }
+
+
+    /* -----------------------------------------------------------
+        Global classes
+    ----------------------------------------------------------- */
+    .detail_list ul li {
+        margin-bottom: 60px;
+    }
+    .detail_list ul li .content {
+    }
+
+    /* -----------------------------------------------------------
+       Page Specific
+    ----------------------------------------------------------- */
+
+    .fullscreen_slideshow ul li .content .inner {
+        display: block;
+    }
+        .fullscreen_slideshow ul li .content .title_area {
+            clear: both;
+            display: block;
+            width: 100%;
+        }
+        .fullscreen_slideshow ul li .content .slideshow-date-location {
+            float: none;
+            clear: both;
+            display: block;
+            width: 100%;
+            text-align: left;
+            padding: 5px 0 0;
+        }
+        .fullscreen_slideshow ul li .content .slideshow-date-location span {
+            margin: 0;
+            display: block;
+            clear: both;
+        }
+        .fullscreen_slideshow ul li .content .date, .fullscreen_slideshow ul li .content .location {
+            padding-top: 0;
+        }
+
+    /* .fullscreen_slideshow ul li .content .date,
+    .fullscreen_slideshow ul li .content .location {
+        margin-left: 0;
+    } */
+    /* Artist list
+    ----------------------------------------------------------- */
+    .page-artists.no-page-params #main_content {
+        padding-top: 190px;
+        margin-bottom: 50px;
+        height: auto;
+        box-sizing: border-box;
+        display: block;
+    }
+    /* #publications_artists_nav ul {
+        margin-right: -30px;
+    }
+    #publications_artists_nav ul li {
+        margin: 0 0 24px 0;
+        width: 33.3%;
+        clear: none;
+        padding-right: 30px;
+    } */
+    #filters #list_original ul,
+    #filters #list_formatted ul {
+        width: 33%;
+    }
+
+    .page-artists .subsection-artist-list-preview #list_preview_navigation.records_list.columns_list {
+        margin-right: -30px;
+    }
+    .page-artists .subsection-artist-list-preview #list_preview_navigation.records_list.columns_list .subheading,
+    .page-artists .subsection-artist-list-preview #list_preview_navigation .list_preview_section .subheading {
+        padding-right: 30px;
+    }
+    .page-artists .subsection-artist-list-preview #list_preview_navigation.records_list.columns_list ul {
+        width: 33.3%;
+        padding-right: 30px;
+    }
+    .page-artists .subsection-artist-list-preview #list_preview_navigation.records_list.columns_list ul li {
+        margin: 0 0 20px 0;
+    }
+    
+    /* Exhibition list
+    ----------------------------------------------------------- */
+    .subsection-exhibitions-grid .feature_list ul li > a,
+    .subsection-exhibitions-grid .feature_list ul li.no-detail-page {
+        display: block;
+    }
+    #exhibitions-grid-past {
+        width: calc(100% - 90px);
+    }
+    #exhibitions-grid-past .detail_list ul {
+        margin-right: 0;
+    }
+    #exhibitions-grid-past .detail_list ul li {
+        display: block;
+        margin-bottom: 50px;
+        padding-right: 0;
+        width: 100%;
+    }
+    #exhibitions_years_nav.navigation ul li {
+        float: none;
+        display: block;
+        margin: 0 0 8px 0;
+        clear: none;
+    }
+    .section-exhibitions .standard-entry-list .exhibitions_list_filters {
+        clear: none;
+        float: left;
+        width: 80px;
+    }
+
+    #exhibitions-grid-current .records_list ul li,
+    #exhibitions-grid-forthcoming .records_list ul li {
+        width: 100%;
+    }
+        #exhibitions-grid-current .records_list ul li .outer,
+        #exhibitions-grid-forthcoming .records_list ul li .outer {
+            width: 100%;
+            max-width: none;
+        }
+        #exhibitions-grid-current .records_list ul li .image,
+        #exhibitions-grid-forthcoming .records_list ul li .image {
+            width: 100%;
+            margin: 0 0 30px;
+        }
+        #exhibitions-grid-current .records_list ul li .content,
+        #exhibitions-grid-forthcoming .records_list ul li .content {
+            width: 100%;
+            padding: 0;
+            float: none;
+            text-align: center;
+        }
+        #exhibitions-grid-current .records_list ul li .link,
+        #exhibitions-grid-forthcoming .records_list ul li .link {
+            display: none;
+        }
+        #exhibitions-grid-current .records_list ul li .content .subtitle,
+        #exhibitions-grid-forthcoming .records_list ul li .content .subtitle {
+            width: 100%;
+            padding: 0;
+            float: none;
+            clear: both;
+            text-align: center;
+            display: block;
+        }
+        .subsection-exhibitions-grid .records_list ul li .exhibition-title-separator, .subsection-exhibitions-grid .feature_list ul li .exhibition-title-separator {
+            display: none;
+        }
+
+    
+    /* Publications
+    ----------------------------------------------------------- */
+    .section-publications #content.subsection-publications-grid .detail_list ul,
+    .section-shop #content.subsection-publications-grid .detail_list ul {
+        margin-right: -30px;
+    }
+    .section-publications #content.subsection-publications-grid .detail_list ul li,
+    .section-shop #content.subsection-publications-grid .detail_list ul li {
+        margin: 0 0 30px 0;
+        width: 25%;
+        padding-right: 30px;
+    }
+    
+    /* Video
+    ----------------------------------------------------------- */
+    .section-video #content .subsection-video-grid .detail_list ul {
+        margin-right: -30px;
+    }
+    .section-video #content .subsection-video-grid .detail_list ul li {
+        margin: 0 0 30px 0;
+        width: 25%;
+        padding-right: 30px;
+    }
+    
+    /* News
+    ----------------------------------------------------------- */
+    .section-news #content.subsection-news-grid .detail_list ul {
+        margin-right: -30px;
+    }
+    .section-news #content.subsection-news-grid .detail_list ul li {
+        margin-bottom: 30px;
+        width: 33.3%;
+        padding-right: 30px;
+    }
+    .section-news #content.subsection-news-grid .detail_list ul li:nth-child(-n+6) {
+        width: 50%;
+        margin-bottom: 40px;
+    }
+    .section-news #content .instagram_grid ul li:nth-child(3),
+    .section-news #content .twitter_grid ul li:nth-child(3) {
+        display: none;
+    }
+    .list_subsection_link {
+        margin-top: -15px;
+        margin-bottom: 25px;
+    }
+    
+    /* Art Fairs
+    ----------------------------------------------------------- */
+    
+    .page-art-fairs #content .records_list ul li {
+        width: 100%;
+    }
+        .page-art-fairs #content .records_list ul li .outer {
+            width: 100%;
+            max-width: none;
+        }
+        .page-art-fairs #content .records_list ul li .image {
+            width: 100%;
+            margin: 0 0 30px;
+        }
+        .page-art-fairs #content .records_list ul li .content {
+            width: 100%;
+            padding: 0;
+            float: none;
+            text-align: center;
+        }
+        .page-art-fairs #content .records_list ul li .content .subtitle {
+            width: 100%;
+            padding: 0;
+            float: none;
+            clear: both;
+            text-align: center;
+            display: block;
+        }
+        .subsection-art-fairs-grid .feature_list ul li > a,
+        .subsection-art-fairs-grid .feature_list ul li.no-detail-page {
+            flex-direction: column;
+        }
+       
+
+
+    
+}
+
+
+
+/* ------------------------------------------------------------------------
+--------------------------------- Size 2.5 ----------------------------------
+------------------------------------------------------------------------ */
+
+
+@media screen and (max-width: 875px) {
+
+
+    /* -----------------------------------------------------------
+       Generic
+    ----------------------------------------------------------- */
+    html {
+        font-size: 9.5px;
+    }
+    body.nav-overlay-open {
+        overflow: hidden;
+    }
+
+    /* -----------------------------------------------------------
+       General layout
+    ----------------------------------------------------------- */
+    
+    #footer .inner {
+        float: left;
+        width: 100%;
+    }
+        #footer #social_links {
+            float: left;
+            clear: both;
+            padding: 20px 0 0;
+            margin: 0 auto;
+            float: none;
+            text-align: center;
+        }
+        #social_links .social_links_item {
+            display: inline-block;
+            float: none;
+        }
+        #social_links .social_links_item:first-child {
+            margin-left: 0;
+        }
+        #footer .copyright {
+            padding: 20px 0 0;
+            text-align: center;
+            float: none;
+            width: 100%;
+        }
+        #footer #artlogic, #footer #copyright {
+            float: none;
+            width: 100%;
+        }
+        #footer #privacy_policy {
+            float: none;
+            margin: 0;
+        }
+        #footer #modern_slavery_statement_button,
+        #footer #section_1721_statement_button,
+        #footer #environmental_responsibility_statement {
+            float: none;
+        }
+
+    #main_content {
+        padding-top: 130px;
+    }
+    
+    h1 {
+        margin: 0 0 20px 0;
+    }
+    #sub_nav {
+        margin: 0;
+    }
+    .navigation ul li {
+        float: left;
+        display: inline;
+        clear: both;
+        margin: 0 25px 0 0;
+    }
+    .navigation ul li ul li:first-child {
+        padding-top: 5px;
+    }
+    .navigation ul li ul li {
+        margin-bottom: 5px;
+    }
+    .video-navigation.navigation ul li {
+        width: 100%;
+        margin: 0 0 10px;
+    }
+    #sidebar, .sidebar,
+    .subsection-publication-record #content #sidebar,
+    .subsection-shop-artwork-record #content #sidebar {
+        width: 100%;
+        float: none;
+        clear: none;
+        height: 100%;
+        display: block;
+        margin-bottom: 30px;
+    }
+    #content, .exhibition-header,
+    .subsection-publication-record #content #content_module,
+    .subsection-shop-artwork-record #content #content_module {
+        width: 100%;
+        display: block;
+        float: none;
+        clear: both;
+        padding-left: 0;
+        margin-bottom: 30px;
+    }
+    #footer .copyright {
+        float: left;
+    }
+    
+    /* -----------------------------------------------------------
+        Global classes
+    ----------------------------------------------------------- */
+    .detail_list ul li {
+        margin-bottom: 50px;
+    }
+    .detail_list ul li .content {
+        padding-left: 0;
+    }
+    .records_list ul li h2 {
+        margin: 0 0 13px;
+        font-size: 2.2rem;
+        line-height: 2.95rem;
+    }
+    /* -----------------------------------------------------------
+       Page Specific
+    ----------------------------------------------------------- */
+    
+        .section-contact #content_module {
+            text-align: center;
+            font-size: 1.5rem;
+            line-height: 2.5rem;
+        }
+
+        .subsection-artist-detail-page .subsection-videos h3 {
+            padding: 0;
+        }
+
+        .video-individual {
+            max-width: none;
+        }
+        .image_list {
+            max-width: none;
+        }
+
+
+        /* Artist list
+        ----------------------------------------------------------- */
+
+        /* #publications_artists_nav ul li {
+            margin: 0 0 24px 0;
+            width: 50%;
+            clear: none;
+            padding-right: 30px;
+        } */
+        #filters_artists_nav #list_formatted ul,
+        #filters_artists_nav #list_original ul {
+            width: 50%;
+        }
+        .page-artists .subsection-artist-list-preview #list_preview_navigation.records_list.columns_list ul {
+            width: 50%;
+        }
+        
+
+        .exhibition-header.heading_wrapper h1 {
+            margin: 0;
+        }
+        .exhibition-header {
+            margin-bottom: 10px;
+        }
+        .exhibition-details-wrapper {
+            display: block;
+            margin-bottom: 40px;
+        }
+
+        #exhibitions-grid-past .detail_list ul li {
+            margin-bottom: 20px;
+            padding-right: 0;
+        }
+
+
+        .subsection-exhibition-detail-page li .content,
+        .subsection-installation li .content {
+            display: block;
+            padding-top: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        /* Publications
+        ----------------------------------------------------------- */
+        
+        .section-publications #content.subsection-publications-grid .detail_list ul,
+        .section-shop #content.subsection-publications-grid .detail_list ul {
+            
+        }
+        .section-publications #content.subsection-publications-grid .detail_list ul li,
+        .section-shop #content.subsection-publications-grid .detail_list ul li {
+            margin: 0 0 30px 0;
+            width: 50%;
+            padding-right: 30px;
+        }
+        .section-publications #content.subsection-publications-grid .detail_list ul li .fill,
+        .section-shop #content.subsection-publications-grid .detail_list ul li .fill {
+            padding-top: 100%;
+        }
+
+        /* Video
+        ----------------------------------------------------------- */
+        
+        .section-video #content .subsection-video-grid .detail_list ul {
+            
+        }
+        .section-video #content .subsection-video-grid .detail_list ul li {
+            margin: 0 0 30px 0;
+            width: 50%;
+            padding-right: 30px;
+        }
+        .section-video #content .subsection-video-grid .detail_list ul li .fill {
+            padding-top: 100%;
+        }
+        
+        /* Contact
+        ----------------------------------------------------------- */
+        .section-contact #content_module {
+            width: 100%;
+        }
+        .section-contact #sidebar {
+            width: 100%;
+        }
+        
+        /* Contact
+        ----------------------------------------------------------- */
+        .section-search h2.list-heading {
+            width: 100%;
+            float: none;
+        }
+        .section-search #quick_search form {
+            margin-bottom: 30px;
+        }
+
+
+    div.arprompt {
+        width: 80%;
+    }
+
+    .store_item .variant {
+        width: 100%;
+    }
+    .store_item.active .store_item_controls, 
+    .store_item.sale_mode .store_item_controls {
+        clear: both;
+        float: left;
+        width: 100%;
+        display: block;
+        padding: 5px 0 0;
+    }
+
+    .subsection-store-basket #content_module {
+        width: 100%;
+        margin-right: 0;
+        margin: 0 0 50px;
+    }
+    .subsection-store-basket #sidebar {
+        width: 100%;
+    }
+    
+    .section-contact #artlogic_mailinglist_signup_form {
+        margin: auto;
+    }
+
+}
+
+
+
+/* ------------------------------------------------------------------------
+--------------------------------- Size 2 ----------------------------------
+------------------------------------------------------------------------ */
+
+
+@media screen and (max-width: 767px) {
+
+
+        /* .section-publications .list_grid_filter_control.navigation ul li.first {
+            display: none !important;
+        } */
+
+
+        .artist-header .video-navigation {
+            display: none !important;
+        }
+        .video-navigation-below-content {
+            display: block;
+        }
+            .video-navigation-below-content .single_group {
+                display: none;
+            }
+        .exhibition-navigation-below-content {
+            display: block;
+        }
+            .exhibition-navigation-below-content .single-item-group {
+                display: none;
+            }
+        #sub_nav .exhibition-years-navigation .exhibition-year-list,
+        #sub_nav .exhibition-years-navigation .navigation-dropdown:after {
+            display: none;
+        }
+
+        
+    #main_content {
+        padding-top: 100px;
+    }
+
+    #exhibitions_nav {
+        display: none;
+    }
+
+
+    #header {
+        padding: 45px 0 0;
+    }
+    #header.header_fixed {
+        position: absolute;
+        top: 0;
+        z-index: 3001;
+    }
+    body.cms-frontend-toolbar-active #header.header_fixed {
+        position: absolute;
+        top: 0;
+    }
+    body.cms-frontend-toolbar-active.type-fullscreen #header.header_fixed, 
+    body.cms-frontend-toolbar-active.section-artists.no-page-params #header.header_fixed {
+        top: 28px;
+    }
+    #logo a, #logo a:visited {
+        font-size: 2.4rem;
+        line-height: 2.6rem;
+    }
+    #basket {
+        position: absolute;
+        top: 47px;
+        right: 102px;
+        margin: 0;
+    }
+    #header_quick_search {
+        margin: 0;
+        height: 26px;
+        position: absolute;
+        top: 43px;
+        right: 62px;
+        z-index: 4000;
+    }
+    #header_quick_search.active {
+            right: 20px;
+        }
+        #header_quick_search.active #header_quicksearch_field {
+            width: calc(100vw - 59px);
+            opacity: 1.0;
+            visibility: visible;
+        }
+        #logo,
+        #basket,
+        #top_navigation_reveal {
+            z-index: 1;
+        }
+        body.header_quick_search_open #logo,
+        body.header_quick_search_open #basket,
+        body.header_quick_search_open #top_navigation_reveal {
+            opacity: 0;
+        }
+    /*#top_navigation_reveal {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        z-index: 3000;
+        right: 123px;
+    }*/
+    
+    #top_navigation_reveal {
+        display: block;
+        width: 22px;
+        height: 20px;
+        position: absolute;
+        right: 20px;
+        top: 49px;
+        margin: 0;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: .5s ease-in-out;
+        -moz-transition: .5s ease-in-out;
+        -o-transition: .5s ease-in-out;
+        transition: .5s ease-in-out;
+        cursor: pointer;
+        z-index: 3000;
+    }
+    #top_navigation_reveal span {
+        display: block;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background: #010101;
+        opacity: 1;
+        left: 0;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: .25s ease-in-out;
+        -moz-transition: .25s ease-in-out;
+        -o-transition: .25s ease-in-out;
+        transition: .25s ease-in-out;
+    }
+    body.fullscreen-slide-dark #top_navigation_reveal span {
+        background: #fff !important;
+    }
+    body.nav-overlay-open #top_navigation_reveal span {
+    }
+    #top_navigation_reveal span:nth-child(1) {
+        top: 0px;
+    }
+    #top_navigation_reveal span:nth-child(2), #top_navigation_reveal span:nth-child(3) {
+        top: 7px;
+    }
+    #top_navigation_reveal span:nth-child(4) {
+        top: 14px;
+    }
+    body.nav-overlay-open #top_navigation_reveal span:nth-child(1) {
+        top: 7px;
+        width: 0%;
+        left: 50%;
+    }
+    body.nav-overlay-open #top_navigation_reveal span:nth-child(2) {
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    body.nav-overlay-open #top_navigation_reveal span:nth-child(3) {
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+    body.nav-overlay-open #top_navigation_reveal span:nth-child(4) {
+        top: 7px;
+        width: 0%;
+        left: 50%;
+    }
+
+
+    #top_nav.navigation ul li ul {
+        display: block;
+        max-height: none;
+        opacity: 1;
+        padding: 35px 0 20px;
+    }
+        #top_nav.navigation ul li ul li:last-child {
+            margin-bottom: 0;
+        }
+    
+    
+    #header.header_fixed {
+        background: transparent;
+    }
+    .topnav-overlay {
+        visibility: hidden;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100vh;
+        background: transparent;
+        z-index: 3000;
+        max-height: 0;
+        overflow: hidden;
+        -webkit-transition: max-height 0.5s cubic-bezier(0.000, 0.575, 0.130, 1); /* older webkit */
+        -webkit-transition: max-height 0.5s cubic-bezier(0.000, 0.575, 0.130, 1.045);
+           -moz-transition: max-height 0.5s cubic-bezier(0.000, 0.575, 0.130, 1.045);
+             -o-transition: max-height 0.5s cubic-bezier(0.000, 0.575, 0.130, 1.045);
+                transition: max-height 0.5s cubic-bezier(0.000, 0.575, 0.130, 1.045); /* custom */
+        -webkit-transition-timing-function: cubic-bezier(0.000, 0.575, 0.130, 1); /* older webkit */
+        -webkit-transition-timing-function: cubic-bezier(0.000, 0.575, 0.130, 1.045);
+           -moz-transition-timing-function: cubic-bezier(0.000, 0.575, 0.130, 1.045);
+             -o-transition-timing-function: cubic-bezier(0.000, 0.575, 0.130, 1.045);
+                transition-timing-function: cubic-bezier(0.000, 0.575, 0.130, 1.045); /* custom */
+    }
+    body.nav-overlay-open .topnav-overlay {
+        visibility: visible;
+        max-height: 100vh;
+        background: rgba(1, 1, 1, 0.96);
+        background: #fff;
+    }
+    body.nav-overlay-open #logo a,
+    body.nav-overlay-open #logo a:visited,
+    body.nav-overlay-open #top_nav.navigation ul li a,
+    body.nav-overlay-open #top_nav.navigation ul li a:visited {
+        color: #222 !important;
+    }
+    body.nav-overlay-open #top_navigation_reveal span {
+        background: #222 !important;
+    }
+
+    #top_nav.navigation {
+        float: none;
+        clear: both;
+        padding-top: 0;
+    }
+    #top_nav.navigation ul.topnav {
+        vertical-align: middle;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 120px 20px 90px 20px;
+        box-sizing: border-box;
+        width: 100%;
+        display: none;
+    }
+    body.nav-overlay-open #top_nav.navigation ul.topnav {
+        display: block;
+    }
+    #top_nav.navigation ul li {
+        float: none;
+        display: block;
+        margin: 0px 0px 15px 0;
+        clear: none;
+        text-align: left;
+    }
+
+    #translations_nav.navigation ul li {
+        display: inline-block;
+    }
+    #translations_nav.navigation ul li.active a {
+        color: #AAA !important;
+    }
+    /*
+            #translations_nav {
+                position: fixed;
+                top: auto;
+                bottom: 20px;
+                right: 20px;
+                display: none;
+            }
+            body.nav-overlay-open #translations_nav {
+                display: block;
+            }
+            #translations_nav.navigation ul li {
+                float: none;
+                display: inline-block;
+                margin: 0;
+                clear: none;
+                text-align: left;
+            }
+    */
+
+    .subsection-artist-detail-page .subsection-initial-bio #content_module {
+        float: none;
+        width: 100%;
+        max-width: none;
+    }
+        .subsection-initial-bio .initial_bio_text {
+            float: none;
+            width: 100%;
+            padding: 0;
+            margin: 0 0 40px;
+        }
+        .subsection-initial-bio .initial_bio_image {
+            float: none;
+            width: 100%;
+        }
+        
+    
+    .align-height-grid ul li {
+        width: 100% !important;
+    }
+    .jpictura .jpictura-item {
+        width: 100% !important;
+    }
+    .jpictura .jpictura-item .image {
+        height: auto !important;
+    }
+    .jpictura .jpictura-item .image img {
+        transform: none !important;
+        position: static !important;
+        max-width: 100% !important;
+    }
+
+}
+
+
+
+
+/* ------------------------------------------------------------------------
+--------------------------------- Size 1 ----------------------------------
+------------------------------------------------------------------------ */
+
+
+@media screen and (max-width: 540px) {
+
+    /* -----------------------------------------------------------
+       Generic
+    ----------------------------------------------------------- */
+    #container {
+        padding: 0 15px;
+    }
+    #header.header_fixed .inner {
+        padding: 0 15px 15px 15px;
+    }
+
+    /* -----------------------------------------------------------
+       General layout
+    ----------------------------------------------------------- */
+    #top_nav.navigation ul.topnav {
+        padding: 120px 30px 15px 30px;
+    }
+    #top_navigation_reveal {
+        width: 20px;
+        right: 15px;
+    }
+    #header_quick_search {
+        right: 48px;
+    }
+    #basket {
+        right: 83px;
+    }
+    /* -----------------------------------------------------------
+        Global classes
+    ----------------------------------------------------------- */
+    .detail_list ul {
+        margin-right: 0;
+    }
+    .detail_list ul li {
+        margin-bottom: 30px;
+        padding-right: 0;
+    }
+    .detail_list ul li .image {
+        width: 100%;
+        margin: 0 0 25px;
+    }
+    .detail_list ul li .content {
+        width: 100%;
+    }
+
+    .records_list ul li h2 {
+        margin: 0 0 10px;
+        font-size: 1.8rem;
+        line-height: 2.25rem;
+    }
+    .records_list ul li .link {
+        padding-top: 0;
+    }
+    /* -----------------------------------------------------------
+       Page Specific
+    ----------------------------------------------------------- */
+
+    .page-artists.no-page-params #main_content {
+        padding-top: 100px; 
+    }
+    #protected_path_login .form .form_row label {
+        width: 100%;
+        margin: 0 0 15px;
+        clear: both;
+    }
+    #protected_path_login .form .form_row .inputField {
+        width: 100%;
+        clear: both;
+    }
+
+    /* Artist list
+    ----------------------------------------------------------- */
+    .page-artists .subsection-artist-list-preview #list_preview_navigation.records_list.columns_list ul {
+        width: 100%;
+    }
+    .page-artists .subsection-artist-list-preview #list_preview_navigation.records_list.columns_list ul li {
+        margin: 0 0 20px 0;
+    }
+    #filters_artists_nav ul li {
+        margin: 0 0 20px;
+        clear: none;
+    }
+    
+    /* Exhibition list
+    ----------------------------------------------------------- */
+    .section-exhibitions .standard-entry-list .exhibitions_list_filters {
+        clear: both;
+        float: none;
+        width: 100%;
+        position: relative;
+    }
+        .section-exhibitions .standard-entry-list .exhibitions_list_filters .responsive_arrow {
+            display: block;
+            height: 20px;
+            width: 40px;
+            background: url(../images/arrow_right.png) right center no-repeat;
+            background-size: auto 7px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: opacity 400ms ease-in-out;
+        }
+        .section-exhibitions .standard-entry-list .exhibitions_list_filters.horizontal-scroll-end .responsive_arrow {
+            opacity: 0;
+        }
+        .section-exhibitions .standard-entry-list .exhibitions_list_filters.horizontal-scroll-end #exhibitions_years_nav {
+            margin-right: 0;
+        }
+    #exhibitions-grid-past {
+        width: 100%;
+        float: none;
+        display: block;
+    }
+    .section-exhibitions .standard-entry-list .exhibitions_list_filters #exhibitions_years_nav {
+        float: none;
+        overflow-x: scroll;
+        margin-right: 40px;
+        transition: margin 400ms ease-in-out;
+    }
+    .section-exhibitions .standard-entry-list #exhibitions_nav {
+        margin: 0 0 20px;
+    }
+    #exhibitions_years_nav.navigation ul {
+        margin: 0;
+        width: auto;
+        clear: none;
+        display: inline-block;
+        white-space: nowrap;
+        padding-right: 40px;
+    }
+    #exhibitions_years_nav.navigation ul li {
+        display: inline-block;
+        margin: 0 14px 0 0;
+    }
+    #exhibitions-grid-past .detail_list ul {
+        margin-right: 0;
+    }
+    #exhibitions-grid-past .detail_list ul li {
+        margin-bottom: 20px;
+        padding-right: 0;
+    }
+    /* News
+    ----------------------------------------------------------- */
+    .section-news #content.subsection-news-grid .detail_list ul {
+        margin-right: 0;
+    }
+    .section-news #content.subsection-news-grid .detail_list ul li {
+        margin-bottom: 30px;
+        width: 100%;
+        padding-right: 0;
+    }
+    .section-news #content.subsection-news-grid .detail_list ul li:nth-child(-n+6) {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .section-news #content.subsection-news-grid .detail_list ul li .image {
+        width: 100%;
+        max-width: none;
+    }
+    .section-news #content .instagram_grid ul li:nth-child(3),
+    .section-news #content .twitter_grid ul li:nth-child(3) {
+        display: inline-block;
+    }
+    .list_subsection_link {
+        margin-top: 0;
+        display: none;
+    }
+    .list_subsection_link.top {
+        display: block;
+    }
+    
+
+    /* Publications
+    ----------------------------------------------------------- */
+    
+    .section-publications #content.subsection-publications-grid .detail_list ul,
+    .section-shop #content.subsection-publications-grid .detail_list ul {
+        
+    }
+    .section-publications #content.subsection-publications-grid .detail_list ul li,
+    .section-shop #content.subsection-publications-grid .detail_list ul li {
+        width: 100%;
+    }
+    .section-publications #content.subsection-publications-grid .detail_list ul li .fill,
+    .section-shop #content.subsection-publications-grid .detail_list ul li .fill {
+        display: none;
+    }
+    .section-publications #content.subsection-publications-grid .detail_list ul li .image_wrapper,
+    .section-shop #content.subsection-publications-grid .detail_list ul li .image_wrapper {
+        position: static;
+    }
+    .section-publications #filters_artists_nav #list_formatted ul,
+    .section-publications #filters_artists_nav #list_original ul,
+    .section-shop #filters_artists_nav #list_formatted ul,
+    .section-shop #filters_artists_nav #list_original ul {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    /* Video
+    ----------------------------------------------------------- */
+    
+    .section-video #content .subsection-video-grid .detail_list ul {
+        
+    }
+    .section-video #content .subsection-video-grid .detail_list ul li {
+        width: 100%;
+    }
+    .section-video #content .subsection-video-grid .detail_list ul li .fill {
+        display: none;
+    }
+    .section-video #content .subsection-video-grid .detail_list ul li .image_wrapper {
+        position: static;
+    }
+    .section-video #filters_artists_nav #list_formatted ul,
+    .section-video #filters_artists_nav #list_original ul {
+        width: 100%;
+        padding-right: 0;
+    }
+    
+    /* search
+    ----------------------------------------------------------- */
+    .section-search .detail_list ul li .image {
+        width: 100%;
+        float: none;
+        margin-bottom: 15px;
+    }
+    .section-search .detail_list ul li .content {
+        width: 100%;
+        float: left;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+

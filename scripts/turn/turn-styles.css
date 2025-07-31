@@ -1,0 +1,831 @@
+/*body {
+    overflow:hidden;
+    font-size:13px;
+    font-family:Arial, Helvetica, sans-serif;
+    background-color:#B3BCC0;
+}*/
+#flipbook {
+    width:1160px;
+    height:780px;
+    margin:-390px 0 0 -580px !important;
+    position:absolute !important;
+    top:50% !important;
+    left:50% !important;
+    display:none;
+   
+}
+#flipbook .page {
+    width:580px;
+    height:780px;
+    background-color:white;
+    line-height:300px;
+    font-size:20px;
+    text-align:center;
+}
+#flipbook .page-wrapper {
+    -webkit-perspective:2000px;
+    -moz-perspective:2000px;
+    -ms-perspective:2000px;
+    -o-perspective:2000px;
+    perspective:2000px;
+}
+#flipbook .hard {
+    background:#FFF !important;
+    color:#333;
+    font-weight:bold;
+}
+#flipbook .front-cover {
+    display:block;
+    position:absolute;
+    top:18px;
+    bottom:18px;
+    left:18px;
+    right:68px;
+    background-color:#fbec5d;
+}
+#flipbook .false-front-cover {
+    display:block;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:50px;
+    background-color:#FFF;
+    border-right:1px solid #CCC;
+}
+#flipbook .inside-front {
+    display:block;
+    position:absolute;
+    top:18px;
+    bottom:18px;
+    left:18px;
+    right:0.5px;
+    right:0;
+    overflow: hidden;
+    background-color:#FFF;
+}
+#flipbook .inside-front img {
+    position:absolute;
+    height:100%;
+    top:0;
+    left:0;
+    width:auto;
+}
+#flipbook .inside-back {
+    display:block;
+    position:absolute;
+    top:18px;
+    bottom:18px;
+    left:0.5px;
+    left:0;
+    overflow: hidden;
+    right:18px;
+    background-color:#FFF;
+}
+#flipbook .inside-back img {
+    position:absolute;
+    height:100%;
+    width:auto;
+    left: -100%;
+}
+#flipbook ul {
+    padding:0;
+    margin: 0 20% 18px;
+}
+.card-5204366 ul.main-lists{margin-left:16%;margin-right:15%;}
+
+#flipbook ul li {
+    padding: 0;
+    list-style:none;
+}
+#flipbook a {
+    color:#000;
+    text-decoration:none;
+}
+#flipbook .link {
+    color:#000;
+}
+#flipbook .small {
+    bottom:36px;
+    padding:0;
+    position:absolute;
+    width:100%;
+    margin:0;
+}
+#flipbook .small li {
+    float:left;
+    line-height:12px;
+    font-size:12px;
+    vertical-align:top;
+}
+#flipbook .number {
+    padding-left:2%;
+    width:18%;
+}
+#flipbook .from {
+    padding-left:2%;
+    width:25%;
+}
+#flipbook .address {
+    padding-left:2%;
+    width:48%;
+}
+#flipbook .artist {
+    background-color:#FFF;
+    color:#909;
+    position:absolute;
+    left:300px;
+    top:70px;
+    font-size:16px;
+    
+    -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+
+  /* also accepts left, right, top, bottom coordinates; not required, but a good idea for styling */
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+
+  /* Should be unset in IE9+ I think. */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+}
+#flipbook .back-cover {
+    position:relative;
+    line-height:22px;
+    font-size:18px;
+    font-weight:normal;
+    text-align:left;
+    height: 100%;
+}
+#flipbook .first-list {
+    margin-top:18px;
+}
+#flipbook .vertical {
+    line-height: 27px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 40px;
+}
+
+    /* CARD SPECIFIC STYLES --------------------- */
+    /* This is necessary for some invitation cards as they were hard-coded on the old website */
+
+    .invitationcard-id-62 #flipbook .vertical {
+        width:60px;
+        background-size:114%;
+    }
+    /*@media only screen and (max-height: 1030px) and (max-width: 800px){*/
+    /*    .invitationcard-id-62 #flipbook .vertical {*/
+    /*            width: 35px !important;*/
+    /*            background-size:105%;*/
+    /*    }*/
+    /*}*/
+
+#flipbook .vertical h2 {
+   -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+
+  /* also accepts left, right, top, bottom coordinates; not required, but a good idea for styling */
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+
+  /* Should be unset in IE9+ I think. */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+    top: 50px;
+    right: -18px;
+    position: absolute;
+    height: auto;
+    width: auto;
+    margin:0;
+    padding:0;
+    font-size:22px;
+}
+#flipbook .vertical h2.bottom {
+    bottom:100px;
+    top:auto;
+    right:-65px;
+}
+#flipbook .page.p1 {
+    background:none!important;
+    -webkit-box-shadow:none !important;
+    -moz-box-shadow:none !important;
+    -o-box-shadow:none !important;
+    -ms-box-shadow:none !important;
+    box-shadow:none !important;
+}
+
+#flipbook .new-space.display1{
+   display:block;
+}
+
+
+.section-invitation_cards .invis-link.display1{
+    /* margin-top: -20.8vh !important; */
+    margin-top: -7px !important;
+    /* top: 50% !important; */
+    height: 3vh !important;
+    width: 50%;
+    /* height: 30vh !important; */
+}
+
+
+     
+/*@media only screen and (min-height:500px) and (max-height : 780px){*/
+/*    #flipbook {*/
+/*    	width:750px !important;*/
+/*    	height:510px !important;*/
+/*        margin:-255px 0 0 -375px !important;*/
+/*    }*/
+/*    #flipbook .page {*/
+/*    	width:375px !important;*/
+/*    	height:510px !important;*/
+/*    }*/
+/*    #flipbook .back-cover {*/
+/*    	font-size:11px !important;*/
+/*    	line-height:16px!important;*/
+/*	}*/
+/*	#flipbook .small li {*/
+/*    	font-size:9px!important;*/
+/*	}*/
+/*    #flipbook .back-cover ul {*/
+/*        font-size: 13px !important;*/
+/*        line-height:17px !important;*/
+/*    }*/
+/*	#flipbook .small li span{*/
+/*    	display:inline-block !important;*/
+/*    	margin-right: 4px;*/
+/*    }*/
+/*    #flipbook .small li.address br{*/
+/*    	display:block !important;*/
+/*    }*/
+/*	#flipbook .vertical h2 {*/
+/*    	font-size:16px;*/
+/*    	right: -16px;*/
+/*    	top:30px;*/
+/*	}*/
+/*	#flipbook .false-front-cover {*/
+/*    	right:40px;*/
+/*    }*/
+/*    #flipbook .front-cover {*/
+/*    	right:58px;*/
+/*    }*/
+/*}*/
+/*@media only screen and (max-width:800px) and (max-height : 1030px){*/
+/*    #flipbook {*/
+/*    	width:750px !important;*/
+/*    	height:510px !important;*/
+/*        margin:-255px 0 0 -375px !important;*/
+/*    }*/
+/*    #flipbook .page {*/
+/*    	width:375px !important;*/
+/*    	height:510px !important;*/
+/*    }*/
+/*    #flipbook .back-cover {*/
+/*    	font-size:12px !important;*/
+/*    	line-height:16px!important;*/
+/*	}*/
+/*	#flipbook .small li {*/
+/*    	font-size:9px!important;*/
+/*	}*/
+/*	#flipbook .small li span{*/
+/*    	display:inline-block !important;*/
+/*    	margin-right: 4px;*/
+/*    }*/
+/*    #flipbook .small li.address br{*/
+/*    	display:block !important;*/
+/*    }*/
+/*	#flipbook .vertical h2 {*/
+/*    	font-size:16px;*/
+/*    	right: -16px;*/
+/*    	top:30px;*/
+/*	}*/
+/*	#flipbook .false-front-cover {*/
+/*    	right:40px;*/
+/*    }*/
+/*    #flipbook .front-cover {*/
+/*    	right:58px;*/
+/*    }*/
+/*	#flipbook #flipbook .invis-link{*/
+/*    	margin-top:-10px; !important;*/
+/*        z-index:10000000000000;*/
+/*    }*/
+/*}*/
+
+/*@media only screen*/
+/*and (min-device-width : 320px)*/
+/*and (max-device-width : 568px)*/
+/*and (orientation : portrait) {*/
+    
+/*    #flipbook .invis-link{*/
+/*    	margin-top:-160px !important;*/
+/*    }*/
+        
+/*}*/
+    
+    
+/*@media only screen*/
+/*and (min-device-width : 320px)*/
+/*and (max-device-width : 568px)*/
+/*and (orientation : landscape) {*/
+    
+/* 	#flipbook .invis-link{*/
+/*    	margin-top:-160px !important;*/
+/*    }*/
+    
+/*}*/
+    
+/*
+body.section-invitation_cards {
+    overflow:hidden;
+    font-size:13px;
+    font-family:Arial, Helvetica, sans-serif;
+    background-color:#B3BCC0;
+}*/
+.section-invitation_cards #container {
+    min-width: 0;
+}
+.section-invitation_cards #flipbook {
+    width:1160px;
+    height:780px;
+    margin:-390px 0 0 -580px !important;
+    position:absolute !important;
+    top:50% !important;
+    left:50% !important;
+    display:none;
+   
+}
+.section-invitation_cards #flipbook .page {
+    width:580px;
+    height:780px;
+    background-color:white;
+    line-height:300px;
+    font-size:20px;
+    text-align:center;
+}
+.section-invitation_cards #flipbook .page-wrapper {
+    -webkit-perspective:2000px;
+    -moz-perspective:2000px;
+    -ms-perspective:2000px;
+    -o-perspective:2000px;
+    perspective:2000px;
+}
+.section-invitation_cards #flipbook .hard {
+    background:#FFF !important;
+    color:#333;
+    font-weight:bold;
+}
+.section-invitation_cards .front-cover {
+    display:block;
+    position:absolute;
+    top:18px;
+    bottom:18px;
+    left:18px;
+    right:68px;
+    background-color:#fbec5d;
+}
+.section-invitation_cards .false-front-cover {
+    display:block;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:-1px;
+    right:50px;
+    background-color:#FFF;
+    border-right:1px solid #CCC;
+}
+.section-invitation_cards .inside-front {
+    display:block;
+    position:absolute;
+    top:18px;
+    bottom:18px;
+    left:18px;
+    right:0;
+    background-color:#FFF;
+}
+.section-invitation_cards .inside-front img {
+    position:absolute;
+    height:100%;
+    top:0;
+    left:0;
+    width:auto;
+}
+.section-invitation_cards .inside-back {
+    display:block;
+    position:absolute;
+    top:18px;
+    bottom:18px;
+    left:0;
+    right:18px;
+    background-color:#FFF;
+}
+.section-invitation_cards .inside-back img {
+    position:absolute;
+    height:100%;
+    width:auto;
+    left:-576px;
+}
+.section-invitation_cards .subsection-invitationcard-record ul {
+    padding:0;
+    margin: 0 22% 18px;
+}
+.section-invitation_cards .subsection-invitationcard-record ul li {
+    padding: 0;
+    list-style:none;
+}
+.section-invitation_cards .subsection-invitationcard-record a {
+    color:#000;
+    text-decoration:none;
+}
+.section-invitation_cards .subsection-invitationcard-record .link {
+    color:#000;
+}
+.section-invitation_cards .subsection-invitationcard-record .small {
+    bottom:36px;
+    padding:0;
+    position:absolute;
+    width:100%;
+    margin:0;
+}
+.section-invitation_cards .subsection-invitationcard-record .small li {
+    float:left;
+    line-height:12px;
+    font-size:12px;
+    vertical-align:top;
+}
+.section-invitation_cards .subsection-invitationcard-record .number {
+    padding-left:2%;
+    width:18%;
+}
+.section-invitation_cards .from {
+    padding-left:2%;
+    width:25%;
+}
+.section-invitation_cards .address {
+    padding-left:2%;
+    width:48%;
+}
+.section-invitation_cards .artist {
+    background-color:#FFF;
+    color:#909;
+    position:absolute;
+    left:300px;
+    top:70px;
+    font-size:16px;
+    
+    -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+
+  /* also accepts left, right, top, bottom coordinates; not required, but a good idea for styling */
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+
+  /* Should be unset in IE9+ I think. */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+}
+.section-invitation_cards .back-cover {
+    position:relative;
+    line-height:22px;
+    font-size:18px;
+    font-weight:normal;
+    text-align:left;
+    height: 100%;
+}
+.section-invitation_cards .first-list {
+    margin-top:18px;
+}
+.section-invitation_cards .vertical {
+    line-height: 27px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 40px;
+}
+.section-invitation_cards .vertical h2 {
+   -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+
+  /* also accepts left, right, top, bottom coordinates; not required, but a good idea for styling */
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+
+  /* Should be unset in IE9+ I think. */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+    top: 50px;
+    right: -18px;
+    position: absolute;
+    height: auto;
+    width: auto;
+    margin:0;
+    padding:0;
+    font-size:22px;
+}
+.section-invitation_cards .vertical h2.bottom {
+    bottom:100px;
+    top:auto;
+    right:-65px;
+}
+.section-invitation_cards #flipbook .page.p1 {
+    background:none!important;
+    -webkit-box-shadow:none !important;
+    -moz-box-shadow:none !important;
+    -o-box-shadow:none !important;
+    -ms-box-shadow:none !important;
+    box-shadow:none !important;
+}
+
+.section-invitation_cards .new-space.display1{
+   display:block;
+}
+     
+/*@media only screen and (min-height:500px) and (max-height : 780px){*/
+/*    .section-invitation_cards #flipbook {*/
+/*        width:750px !important;*/
+/*        height:510px !important;*/
+/*        margin:-255px 0 0 -375px !important;*/
+/*    }*/
+/*    .section-invitation_cards #flipbook .page {*/
+/*        width:375px !important;*/
+/*        height:510px !important;*/
+/*    }*/
+/*    .section-invitation_cards .back-cover {*/
+/*        font-size:12px !important;*/
+/*        line-height:16px!important;*/
+/*    }*/
+/*    .section-invitation_cards .small li {*/
+/*        font-size:9px!important;*/
+/*    }*/
+/*    .section-invitation_cards .small li span{*/
+/*        display:inline-block !important;*/
+/*        margin-right: 4px;*/
+/*    }*/
+/*    .section-invitation_cards .small li.address br{*/
+/*        display:block !important;*/
+/*    }*/
+/*    .section-invitation_cards .vertical h2 {*/
+/*        font-size:16px;*/
+/*        right: -16px;*/
+/*        top:30px;*/
+/*    }*/
+/*    .section-invitation_cards .false-front-cover {*/
+/*        right:40px;*/
+/*    }*/
+/*    .section-invitation_cards .front-cover {*/
+/*        right:58px;*/
+/*    }*/
+/*}*/
+/*@media only screen and (max-width:800px) and (max-height : 1030px){*/
+/*    .section-invitation_cards #flipbook {*/
+/*        width:750px !important;*/
+/*        height:510px !important;*/
+/*        margin:-255px 0 0 -375px !important;*/
+/*    }*/
+/*    .section-invitation_cards #flipbook .page {*/
+/*        width:375px !important;*/
+/*        height:510px !important;*/
+/*    }*/
+/*    .section-invitation_cards .back-cover {*/
+/*        font-size:12px !important;*/
+/*        line-height:16px!important;*/
+/*    }*/
+/*    .section-invitation_cards .small li {*/
+/*        font-size:9px!important;*/
+/*    }*/
+/*    .section-invitation_cards .small li span{*/
+/*        display:inline-block !important;*/
+/*        margin-right: 4px;*/
+/*    }*/
+/*    .section-invitation_cards .small li.address br{*/
+/*        display:block !important;*/
+/*    }*/
+/*    .section-invitation_cards .vertical h2 {*/
+/*        font-size:16px;*/
+/*        right: -16px;*/
+/*        top:30px;*/
+/*    }*/
+/*    .section-invitation_cards .false-front-cover {*/
+/*        right:40px;*/
+/*    }*/
+/*    .section-invitation_cards .front-cover {*/
+/*        right:58px;*/
+/*    }*/
+/*    .section-invitation_cards .invis-link{*/
+/*        margin-top:-10px; !important;*/
+/*        z-index:10000000000000;*/
+/*    }*/
+/*}*/
+
+/*@media only screen*/
+/*and (min-device-width : 320px)*/
+/*and (max-device-width : 568px)*/
+/*and (orientation : portrait) {*/
+    
+/*    .section-invitation_cards .invis-link{*/
+/*        margin-top:-160px !important;*/
+/*    }*/
+        
+/*}*/
+    
+    
+/*@media only screen*/
+/*and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape) {*/
+/*    .section-invitation_cards .invis-link{*/
+/*        margin-top:-160px !important;*/
+/*    }*/
+/*}*/
+
+.section-invitation_cards .first-list{
+    margin-bottom:5px !important;
+}
+.section-invitation_cards .open, .section-invitation_cards .prev {
+    opacity:0;
+    filter: alpha(opacity=0);
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:100000;
+}
+.section-invitation_cards .left {
+    width:50%;
+    position:absolute;
+    left:0;
+    top:0;
+    height:100%;
+}
+.section-invitation_cards .right {
+    position:absolute;
+    width:50%;
+    right:0;
+    top:0;
+    height:100%;
+}
+.section-invitation_cards .prev {
+    display:none;
+}
+.section-invitation_cards .invis-link,
+.section-invitation_cards .invis-additional,
+.section-invitation_cards .invis-website{
+    position:fixed;
+    width:50%;
+    left:0;
+    margin-top: -176px;
+    top: 50%;
+    height:55px;
+    z-index:10000000000000;
+    display:block;
+    display:none;
+}
+.section-invitation_cards .invis-additional{
+    margin-top: -43px;
+}
+
+
+.section-invitation_cards .address-1{
+    margin-top: -136px;
+}
+.section-invitation_cards .invis-additional{
+    top: 48%;
+}
+.section-invitation_cards .invis-website{
+    margin: 0;
+    height: 20%;
+    top: 80%;
+}
+.section-invitation_cards .open .left {
+    background-color:grey;
+}
+.section-invitation_cards .open .right {
+    background-color:grey;
+}
+.section-invitation_cards .prev .left {
+    background-color:grey;
+}
+.section-invitation_cards .prev .right {
+    background-color:grey;
+}
+.section-invitation_cards .new-space {
+    display: block;
+}
+/*@media only screen and (min-height:500px) and (max-height : 780px) {*/
+/*    .section-invitation_cards .invis-link,*/
+/*    .section-invitation_cards .invis-additional{*/
+/*        margin-top: -96px !important;*/
+/*        height:70px !important;*/
+/*    }*/
+/*    .section-invitation_cards .invis-link {*/
+/*        top: 360px;*/
+/*    }*/
+/*    .section-invitation_cards .invis-additional{*/
+/*        top: 360px !important;*/
+/*    }*/
+/*    .section-invitation_cards .invis-link.address-1,*/
+/*    .section-invitation_cards .invis-additional.address-1{*/
+/*        margin-top: -56px;*/
+/*    }*/
+    /*
+    .section-invitation_cards .invis-link.display1{
+        margin-top:0 !important;
+        top:0 !important;
+        height:430px !important;
+    }*/
+/*    ..section-invitation_cards back-cover ul {*/
+/*        font-size: 11px !important;*/
+/*    }*/
+/*}*/
+/*@media only screen and (max-width:800px) and (max-height : 1030px) {*/
+/*    .section-invitation_cards .invis-link,*/
+/*    .section-invitation_cards .invis-additional{*/
+/*        margin-top: -86px;*/
+/*    }*/
+/*    .section-invitation_cards .invis-link.address-1,*/
+/*    .section-invitation_cards .invis-additional.address-1{*/
+/*        margin-top: -56px;*/
+/*    }*/
+/*    .section-invitation_cards .back-cover ul {*/
+/*        font-size: 11px !important;*/
+/*    }*/
+/*}*/
+/*@media only screen and (max-height : 950px) {*/
+    /*
+    .section-invitation_cards .invis-link.display1,
+    .section-invitation_cards .display1.invis-additional {
+        margin-top:-196px;
+    }*/
+/*}*/
+/*@media only screen and (max-width:1030px){*/
+    /*
+    .section-invitation_cards .invis-link.display1{
+        margin-top:0 !important;
+        top:0 !important;
+        height:350px !important;
+    }
+    */
+/*}*/
+/*@media only screen and (max-width:690px){*/
+/*    .section-invitation_cards .prev{*/
+/*        display:none !important;*/
+/*    }*/
+/*}*/
+/*@media only screen and (min-width:600px) and (max-width:780px){*/
+/*    .section-invitation_cards .invis-link.display1{*/
+/*        height:60% !important;*/
+/*    }*/
+/*    .section-invitation_cards .display1.invis-additional{*/
+/*        margin-top:-50px !important;*/
+/*    }*/
+/*}*/
+/*@media only screen and (max-device-width:690px){*/
+/*    .section-invitation_cards .invis-link.display1{*/
+/*        height:60% !important;*/
+/*    }*/
+/*    .section-invitation_cards .display1.invis-additional{*/
+/*        margin-top:-50px !important;*/
+/*    }*/
+/*}*/
+/*@media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px){*/
+/* .section-invitation_cards .invis-link.display1{top:0% !important;height:60% !important;} */
+/*}*/
+
+
+/*@media only screen and (max-width:1030px){*/
+/*    .section-invitation_cards .inside-back img{*/
+/*        z-index:20;*/
+/*    }*/
+    /* 
+    .section-invitation_cards .inside-back:after{
+        content:"";
+        position:absolute;
+        top:0;left:0;bottom:0;
+        z-index:10;
+        width:50px;
+        background:#000;
+    }*/
+/*}*/
