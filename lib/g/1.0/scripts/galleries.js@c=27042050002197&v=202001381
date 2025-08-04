@@ -3756,7 +3756,7 @@
                         if (typeof window.archimedes.proxy_dir != 'undefined') {
                             var url_prefix = window.archimedes.proxy_dir;
                         }
-
+                        console.log(url_prefix + '/contact/form/' + form_url_params)
                         $.fancybox.open(
                             url_prefix + '/contact/form/' + form_url_params,
                             {
