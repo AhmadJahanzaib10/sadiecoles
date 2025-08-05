@@ -4234,15 +4234,6 @@
                             }
                         });
                     })
-                    .submit(function (e) {
-                        e.preventDefault();
-                        if ($("#mailing_list_form, #artlogic_mailinglist_signup_form").hasClass("submit_disabled")) {
-                            return false;
-                        } else {
-                            $("#mailing_list_form, #artlogic_mailinglist_signup_form").addClass("submit_disabled");
-                        }
-                        self._send_form($(this).closest('form'));
-                    })
                 ;
                 if ($('.contact_form_captcha_enabled').length > 0) {
                     if (typeof google_captcha_onload != 'undefined') {
